@@ -24,7 +24,7 @@ mkdir -p $build_dir/public/assets
 
 aws_bin=$tmp_dir/aws/dist/aws
 
-download_file $aws_bin packs/manifest.json packs/manifest.json
+download_file $aws_bin packs/manifest.json public/packs/manifest.json
 
 download_file $aws_bin assets/manifest-$SOURCE_VERSION.json $(get_env_variable ${env_dir} "ASSET_MANIFEST_PATH") || \
   download_file $aws_bin assets/manifest-latest.json $(get_env_variable ${env_dir} "ASSET_MANIFEST_PATH")
